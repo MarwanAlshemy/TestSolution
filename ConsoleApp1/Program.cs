@@ -12,13 +12,18 @@ namespace ConsoleApp1
         {
             // Ahmed Ismail
             Console.WriteLine(SayHello());
-            SayHello();
-            Console.WriteLine("Hello");
+            Console.WriteLine(SayHello("Ahmed Ismaeil"));
+          
         }
         static string SayHello()
         {
             string name = "Ahmed";
             return name;
+        }
+        static string SayHello(string name)
+        {
+            string fullname = name + " Family Name";
+            return fullname;
         }
     }
 }
