@@ -38,7 +38,32 @@ namespace ConsoleApp1
             emp.ID = 1;
             emp.FullName = "Mahmoud";
             emp.Dept = "IT";
-            Console.WriteLine(EmpDetails(emp)); //1 Mahmoud IT
+
+            Employee emp1 = new Employee();
+            emp1.ID = 2;
+            emp1.FullName = "Ali";
+            emp1.Dept = "HR";
+
+             Employee emp2 = new Employee();
+            emp2.ID = 3;
+            emp2.FullName = "ahmed";
+            emp2.Dept = "QL";
+
+            
+            List<Employee> list = new List<Employee>();
+            list.Add(emp);
+            list.Add(emp1);
+            list.Add(emp2);
+
+
+
+            IQueryable<Employee> EmpList=list.AsQueryable();
+            foreach (var item in EmpList)
+            {
+                Console.WriteLine(item.FullName);
+            }
+           
+           // Console.WriteLine(EmpDetails(emp)); //1 Mahmoud IT
         }
         static string SayHello()
         {
