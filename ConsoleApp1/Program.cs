@@ -10,6 +10,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            // Ahmed Ismail
+            Console.WriteLine(SayHello());
+            SayHello();
+            Console.WriteLine("Hello");
+        }
+        static string SayHello()
+        {
+            string name = "Ahmed";
+            return name;
         }
     }
 }
